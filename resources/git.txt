@@ -1,0 +1,65 @@
+					
+
+
+					/////////
+					///GIT///
+					/////////
+
+git push gh-pages
+faz00li.github.io/<nameOfProject>
+
+///GIT Commands///
+git about
+git status 
+git log
+git branch
+git branch -D
+git remote -v 
+git checkout
+git merge <branchName> (on master)
+
+
+
+///GIT Setup
+1 
+git clone <https://github.com>
+
+------------ or ---------------
+2
+git init
+
+3
+create repo on github.com
+
+4
+git remote add <initials> <https://github.com/...> -> add online repo
+
+
+///Git Add/Commit/Push///
+1
+git add <fileName.ext> -> track file on local machine
+
+2
+git commit -m "" -> commit to git on local machine
+
+
+3
+git push <remote_name> <branch_name>
+
+
+git diff - view changes in files btw. commits
+///// ORDER /////
+git status
+git diff
+git add
+git commit
+
+.gitignore -> file
+.gitignore:
+node_modules/
+.DS_Store
+dist/
+
+to remove file being tracked
+add to .gitignore THEN
+$ git rm -r --cached [FILE-NAME]

@@ -1,0 +1,116 @@
+/////////box model///////////////
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+Keep width and height dimensions, implode inwards
+
+
+
+//////////DISPLAY////////////////
+/* 
+display inline/block/inline-block
+
+width and height of parent container 
+
+padding: extention of element
+does not accept negative value
+
+border: edge
+
+margin: outside, takes negative values
+*/
+
+/*font-size applies to font AND space characters, eliminate html linebreaks */
+/* inline-block: width, height, inline */
+ /* height and width do not apply to inline elements */
+.container {
+  width: 800px;
+  font-size: 0;
+}
+div {
+  background: lightgreen;
+  height: 100px;
+  width: 200px;
+  font-size: 16px;
+  
+  display: inline-block;
+/*   margin-left: -4px; */
+}
+span {
+  background: lightblue;
+  font-size: 16px;
+  height: 100px;
+  width: 200px;
+  display: inline-block;
+/*   margin-left: -4px; */
+}
+
+<section class="container">
+  <div>Block</div>
+  <div>Block</div>
+  <span>Inline</span>
+  <span>Inline</span>
+</section>
+
+///CSS///
+
+1
+box model
+
+height
+width
+padding -> no negative values
+border
+margin -> auto:centers element in viewport
+inline -> no height/width
+
+Float: none, left, right, inherit
+
+2
+display: block inline inline-block
+
+3
+linebreak -> space btw/ elements due to html
+work-around -> container element font-size: 0, inherited must be over written in children
+
+4
+boxsize fix -> element keeps h/w
+html { 
+	box-sizing: border-box;
+}
+
+*,*:before, *:after{
+	box-sizing: inherit;
+}
+
+5
+.clear {
+    clear:both
+} 
+in html container element
+clears everything following this element
+
+6
+self clear
+	1
+***clearfix hack*** -> remove wrap introduced by float
+CSS
+.clearfix: after {
+  content: "",
+  display: table;
+  clear; both'
+}
+
+HTML
+<parent element class="clearfix"
+ 
+	2
+overflow fix
+overflow: hidden, auto (scroll if needed), scroll (always)
+
+	3
+display: flow-root
